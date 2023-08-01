@@ -18,7 +18,8 @@ int print_str(va_list ap)
 	len = _strlen(str);
 	len++;
 	ptr = malloc(sizeof(char) * len);
-	
+	if (ptr == NULL)
+		return (0);
 	for (i = 0; i < len; i++)
 	{
 		_putchar(str[i]);
