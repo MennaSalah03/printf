@@ -10,18 +10,15 @@
 int _printf(const char *format, ...)
 {
 	va_list ap;
-	int i = 0, j;/*for indexing*/
-	int len = 0;
+	int i = 0, j, len = 0;
 	form_spec fs[] = {
-		{'c', print_char}, {'s', print_str}
-		, {'r', print_rev}, {'R', print_rot13
-		}, {'\0', NULL}
+		{'c', print_char}, {'s', print_str}, {'i', print_int}, {'d', print_int}
+		, {'r', print_rev}, {'R', print_rot13}, {'S', print_S}, {'\0', NULL}
 	};
-	va_start(ap, format);
 
+	va_start(ap, format);
 	if (format == NULL || (format[0] == '%' && format[1] == '\0'))
 		return (-1);
-
 	while (format[i] != '\0')
 	{
 		if (format[i] != '%')/*normal char case*/

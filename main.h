@@ -17,7 +17,7 @@
  * struct specifiers - contains format specifiers as called in printf
  * and the function that executes them
  * @ch: the character representing the specifier
- * @f: function pointer to suitable 
+ * @f: function pointer to suitable
  */
 typedef struct format_specifiers
 {
@@ -37,6 +37,8 @@ int _printf(const char *format, ...);
 /*called functions*/
 int print_char(va_list ap);
 int print_str(va_list ap);
+int print_int(va_list ap);
+int print_S(va_list ap);
 int print_rev(va_list ap);
 int print_rot13(va_list ap);
 

@@ -1,7 +1,7 @@
 #include "main.h"
 
 /**
- * print_rot13
+ * print_rot13 - codes and decodes rot13 code
  * @ap: pointer to string to encode in rot13
  *
  * Return: string length
